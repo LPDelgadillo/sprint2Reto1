@@ -31,12 +31,17 @@ const DivFlex = styled.div`
 `
 const LiCursor = styled.li`
   cursor: pointer;
+  background-color:#f0fafb;
+  padding: 8px;
+  margin-right: 10px;
+  color: #69BFB7 ;
+  font-weight: 600;
 `
 
 export default class Card extends Component {
   render() {
     const {id, empresa, imagen, publicacion, ubicacion, cargo, modalidad, palabrasClaves}=this.props.ofertaProps
-    let [a, b, c, d, e, f, g, h = ""] = palabrasClaves 
+    let [a, b, c, d, e = ""] = palabrasClaves 
     // let palabra = palabrasClaves.map((palabra, index)=>(
     //   <li key={index}>{palabra}</li>
       
@@ -60,8 +65,6 @@ export default class Card extends Component {
             <LiCursor>{c}</LiCursor>
             <LiCursor>{d}</LiCursor>
             <LiCursor>{e}</LiCursor>
-            <LiCursor>{f}</LiCursor>
-            <LiCursor>{g}</LiCursor>
           </UlFlex>
         </div>
         </DivFlex>
