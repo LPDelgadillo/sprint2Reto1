@@ -29,14 +29,16 @@ const DivFlex = styled.div`
   justify-content:space-between;
   align-items: center;
 `
-
+const LiCursor = styled.li`
+  cursor: pointer;
+`
 
 export default class Card extends Component {
   render() {
     const {id, empresa, imagen, publicacion, ubicacion, cargo, modalidad, palabrasClaves}=this.props.ofertaProps
-    let [a, b, c, d, e, f, g, h, i = ""] = palabrasClaves 
+    let [a, b, c, d, e, f, g, h = ""] = palabrasClaves 
     // let palabra = palabrasClaves.map((palabra, index)=>(
-    //   <li key={palabra.index}>{palabra}</li>
+    //   <li key={index}>{palabra}</li>
       
     return (
       <DivFlex>
@@ -53,13 +55,13 @@ export default class Card extends Component {
         </DivPrincipal>
         <div>
           <UlFlex>
-            <li>{a}</li>
-            <li>{b}</li>
-            <li>{c}</li>
-            <li>{d}</li>
-            <li>{e}</li>
-            <li>{f}</li>
-            <li>{g}</li>
+            <LiCursor>{a}</LiCursor>
+            <LiCursor>{b}</LiCursor>
+            <LiCursor>{c}</LiCursor>
+            <LiCursor>{d}</LiCursor>
+            <LiCursor>{e}</LiCursor>
+            <LiCursor>{f}</LiCursor>
+            <LiCursor>{g}</LiCursor>
           </UlFlex>
         </div>
         </DivFlex>
